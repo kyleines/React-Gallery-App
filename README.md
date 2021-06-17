@@ -1,3 +1,49 @@
+# React Gallery App
+
+### Welcome to my React Gallery App for the Team Treehouse: FSJS Techdegree - Unit 7 Project.
+
+By using the search bar or the provided topic links, users can see a gallery of 24 photos that were "fetched" with the Flickr API.
+
+This project was initialized using the Create-React-App Tool and was built in the style of modern SPA's, or single-page applications, to keep it fast, modular, and in sync with current web development trends. \
+This project utilizes some of the best practices of working with React, like using JSX to write markup-like syntax directly in JS files and managing state with React Hooks in a React function component that passes data down to reusable stateless components.
+
+This app's features include: \
+:heavy_check_mark: A search bar \
+:heavy_check_mark: Provided topic links \
+:heavy_check_mark: Custom styling \
+:heavy_check_mark: Custom error pages
+
+Thanks for visiting! \
+Feedback, follows, and stars are all appreciated!
+
+-Kyle
+
+<br>
+
+### Developer's Notes:
+Developers will need to either:
+- Create a config.js file in the src/ folder to store their Flickr API Key
+```javascript
+const apiKey = "YOUR KEY HERE";
+export default apiKey;
+```
+- Update the App.js component file with their key stored in a variable under the API commented section.
+```javascript
+// API Key
+const apiKey = "YOUR KEY HERE";
+```
+The following styles have been changed from the default styles in the index.css stylesheet file:
+- The background color to a linear-gradient style.
+- Headings text, topic links, search box, and photo tiles all have shadow styling.
+- Most text sizes have been increased.
+
+<br>
+<br>
+
+p.s. Follow me on [Twitter](https://twitter.com/kyleines) & [Instagram](https://instagram.com/kyleines)! @kyleines
+
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
