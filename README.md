@@ -27,15 +27,15 @@ Developers will need to either:
 const apiKey = "YOUR KEY HERE";
 export default apiKey;
 ```
-- Update the App.js component file with their key stored in a variable under the API commented section.
+- Or update the App.js component file with their key stored in a variable under the API commented section
 ```javascript
 // API Key
 const apiKey = "YOUR KEY HERE";
 ```
 The following styles have been changed from the default styles in the index.css stylesheet file:
-- The background color to a linear-gradient style.
-- Headings text, topic links, search box, and photo tiles all have shadow styling.
-- Most text sizes have been increased.
+- The background color to a linear-gradient style
+- Headings text, topic links, search box, and photo tiles all have shadow styling
+- Most text sizes have been increased
 
 <br>
 <br>
