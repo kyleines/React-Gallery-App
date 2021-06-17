@@ -13,7 +13,7 @@ const Gallery = ({getPhotos, photos, loading}) => {
     let query = useParams().query;
     useEffect(() => {
         getPhotos(query);
-        // eslint-disable-next-line     <-- Line necessary to get rid of console warning
+        // eslint-disable-next-line
     }, [query]);
 
     let component = null;
