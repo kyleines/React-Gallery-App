@@ -1,6 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
+// Component renders navigation links
 const Nav = () => {
     return (
         <nav className="main-nav">

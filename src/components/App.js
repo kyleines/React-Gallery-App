@@ -7,21 +7,23 @@ import {
     Redirect
 } from "react-router-dom";
 
-// App components
+// Import components
 import Search from "./Search";
 import Nav from "./Nav";
 import Gallery from "./Gallery";
 import Error from "./Error";
 
 // API Key
-import myKey from "../config.js";
-const apiKey = myKey;
+import apiKey from "../config.js";
 
+// Main container component
 const App = () => {
 
+    // Using state with React Hooks
     const [photos, setPhotos] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    // Flickr API Request
     const getPhotos = (query) => {
         document.title = `Photos of ${query}`;
         axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
@@ -34,6 +36,7 @@ const App = () => {
             });
     }
 
+    // Routes and component layout
     return (
         <BrowserRouter>
             <div className="container">

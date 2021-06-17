@@ -1,5 +1,6 @@
 import React from "react";
 
+// Component renders when the URL matches no routes
 const Error = () => {
     document.title = `404`;
     return (

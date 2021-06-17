@@ -1,11 +1,17 @@
 import React, {useRef} from "react";
 import {useHistory} from "react-router-dom";
 
+// Component renders Search Bar
 const Search = () => {
 
+    // Captures input
     const searchInput = useRef(null);
+
+    // Variable stores an instance of the useHistory() React Hook
     let history = useHistory();
 
+    // On form submission, a new path is created with
+    // the search input and pushed onto the history array
     const handleSubmit = (e) => {
         e.preventDefault();
         let path = `/${searchInput.current.value}`;

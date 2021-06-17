@@ -1,5 +1,6 @@
 import React from "react";
 
+// Component renders when there are no search results
 const NotFound = () => {
     document.title = `No Photos Found`;
     return (
