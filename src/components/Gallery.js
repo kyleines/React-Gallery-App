@@ -1,24 +1,40 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {useParams} from "react-router-dom";
 import Photo from "./Photo";
+import NotFound from "./NotFound";
 
-const Gallery = (props) => {
+const Gallery = ({getPhotos, photos, loading}) => {
 
-    const photoList = props.photos;
-    let photos = photoList.map(photo => (
+    let query = useParams().query;
+    useEffect(() => {
+        getPhotos(query);
+        // eslint-disable-next-line
+    }, [query]);
+
+    let component = null;
+    component = photos.map(photo => (
         <Photo 
             key={photo.id} 
             server={photo.server}
             id={photo.id}
             secret={photo.secret}    
         />
-    ));
+    ))
+
+    const render = () => {
+        if (photos.length) {
+            return <ul>{component}</ul>
+        } else {
+            return <NotFound />
+        }
+    }
 
     return (
         <div className="photo-container">
-            <h2>Photos</h2>
-            <ul>
-                {photos}
-            </ul>
+            <h2>{query}</h2>
+            {
+                (loading) ? <h1>Loading...</h1> : render()
+            }
         </div>
     );
 };
